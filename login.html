@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Agri Link</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">AL</span>
+      <span>Agri Link</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <main class="login-page">
+    <section class="login-intro">
+      <h1>Choose your login type</h1>
+      <p>Use the correct portal for your role in the Agri Link marketplace.</p>
+    </section>
+
+    <section class="role-grid" aria-label="Login role options">
+      <a class="role-card" href="buyer.html">
+        <span class="role-icon">B</span>
+        <h2>Buyer</h2>
+        <p>Order produce and track deliveries.</p>
+      </a>
+
+      <a class="role-card" href="seller.html">
+        <span class="role-icon">S</span>
+        <h2>Seller</h2>
+        <p>Manage products, stock, and orders.</p>
+      </a>
+
+      <a class="role-card" href="transport.html">
+        <span class="role-icon">T</span>
+        <h2>Transport Services</h2>
+        <p>Accept delivery jobs and update trips.</p>
+      </a>
+
+      <a class="role-card role-card-admin" href="admin.html">
+        <span class="role-icon">A</span>
+        <h2>Admin</h2>
+        <p>Review users, orders, refunds, and platform activity.</p>
+      </a>
+    </section>
+
+    <section class="login-shell" id="login-form">
+      <form class="login-form">
+        <h2>Account login</h2>
+        <label for="role">Login as</label>
+        <select id="role" name="role">
+          <option>Buyer</option>
+          <option>Seller</option>
+          <option>Transport Services</option>
+          <option>Admin</option>
+        </select>
+
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="name@example.com">
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter password">
+
+        <button class="button" type="button">Continue</button>
+        <div class="quick-links" aria-label="Quick role links">
+          <a href="buyer.html">Buyer dashboard</a>
+          <a href="seller.html">Seller dashboard</a>
+          <a href="transport.html">Transport dashboard</a>
+          <a href="admin.html">Admin dashboard</a>
+        </div>
+        <p class="form-note">Demo page only. Connect this form to your backend authentication when ready.</p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

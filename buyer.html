@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buyer Dashboard | Agri Link</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar">
+    <a class="brand admin-brand" href="index.html">
+      <span class="brand-mark">AL</span>
+      <span>Agri Link</span>
+    </a>
+
+    <nav class="admin-nav" aria-label="Buyer navigation">
+      <a href="#overview" class="active">Overview</a>
+      <a href="#market">Marketplace</a>
+      <a href="#orders">My Orders</a>
+      <a href="#deliveries">Deliveries</a>
+      <a href="#payments">Payments</a>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-topbar">
+      <div>
+        <h1>Buyer Dashboard</h1>
+        <p>Find produce, place orders, and track deliveries from trusted sellers.</p>
+      </div>
+      <a href="login.html" class="button button-secondary">Logout</a>
+    </header>
+
+    <section class="stats-grid" id="overview">
+      <article class="stat-card">
+        <span>Active Orders</span>
+        <strong>4</strong>
+        <p>Orders currently in progress</p>
+      </article>
+      <article class="stat-card">
+        <span>Saved Sellers</span>
+        <strong>16</strong>
+        <p>Suppliers you buy from often</p>
+      </article>
+      <article class="stat-card">
+        <span>Open Deliveries</span>
+        <strong>3</strong>
+        <p>Transport trips being tracked</p>
+      </article>
+      <article class="stat-card">
+        <span>This Month</span>
+        <strong>R 18k</strong>
+        <p>Total produce purchases</p>
+      </article>
+    </section>
+
+    <section class="admin-section" id="market">
+      <div class="admin-section-heading">
+        <h2>Available Produce</h2>
+        <p>Browse fresh stock from sellers that are ready to supply today.</p>
+      </div>
+
+      <div class="directory-grid">
+        <article class="directory-card">
+          <h3>Tomatoes</h3>
+          <p>Green Valley Farm</p>
+          <span>R 180 per crate</span>
+        </article>
+        <article class="directory-card">
+          <h3>Potatoes</h3>
+          <p>Sunrise Produce</p>
+          <span>R 95 per bag</span>
+        </article>
+        <article class="directory-card">
+          <h3>Spinach</h3>
+          <p>Hilltop Growers</p>
+          <span>R 35 per bundle</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="admin-section" id="orders">
+      <div class="admin-section-heading">
+        <h2>My Orders</h2>
+        <p>Track orders from request to seller confirmation and delivery.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Produce</th>
+              <th>Seller</th>
+              <th>Delivery</th>
+              <th>Status</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#AG-2042</td>
+              <td>Tomatoes</td>
+              <td>Green Valley Farm</td>
+              <td>Fast Haul</td>
+              <td><span class="tag tag-current">On route</span></td>
+              <td>R 2,160</td>
+            </tr>
+            <tr>
+              <td>#AG-2041</td>
+              <td>Potatoes</td>
+              <td>Sunrise Produce</td>
+              <td>RouteLink</td>
+              <td><span class="tag tag-pending">Confirming</span></td>
+              <td>R 1,520</td>
+            </tr>
+            <tr>
+              <td>#AG-2039</td>
+              <td>Spinach</td>
+              <td>Hilltop Growers</td>
+              <td>FarmMove</td>
+              <td><span class="tag tag-finished">Delivered</span></td>
+              <td>R 840</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="admin-section" id="deliveries">
+      <div class="admin-section-heading">
+        <h2>Delivery Tracking</h2>
+        <p>Follow pickup, transit, and arrival updates for your active orders.</p>
+      </div>
+      <div class="timeline-list">
+        <div class="timeline-item">
+          <span></span>
+          <div>
+            <h3>#AG-2042 picked up</h3>
+            <p>Fast Haul collected tomatoes from Green Valley Farm at 08:20.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span></span>
+          <div>
+            <h3>Delivery expected today</h3>
+            <p>Estimated arrival is 13:45 at your market location.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="admin-section" id="payments">
+      <div class="admin-section-heading">
+        <h2>Payments</h2>
+        <p>Review paid, pending, and refunded order payments.</p>
+      </div>
+      <div class="status-grid compact-status-grid">
+        <div class="status-card finished">
+          <span>Paid</span>
+          <strong>21</strong>
+        </div>
+        <div class="status-card pending">
+          <span>Pending</span>
+          <strong>2</strong>
+        </div>
+        <div class="status-card refund">
+          <span>Refunded</span>
+          <strong>1</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

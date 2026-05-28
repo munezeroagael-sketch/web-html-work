@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transport Dashboard | Agri Link</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar">
+    <a class="brand admin-brand" href="index.html">
+      <span class="brand-mark">AL</span>
+      <span>Agri Link</span>
+    </a>
+
+    <nav class="admin-nav" aria-label="Transport navigation">
+      <a href="#overview" class="active">Overview</a>
+      <a href="#jobs">Delivery Jobs</a>
+      <a href="#routes">Routes</a>
+      <a href="#fleet">Fleet</a>
+      <a href="#earnings">Earnings</a>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-topbar">
+      <div>
+        <h1>Transport Dashboard</h1>
+        <p>Accept delivery jobs, update trips, and manage farm-to-buyer routes.</p>
+      </div>
+      <a href="login.html" class="button button-secondary">Logout</a>
+    </header>
+
+    <section class="stats-grid" id="overview">
+      <article class="stat-card">
+        <span>Open Jobs</span>
+        <strong>9</strong>
+        <p>Available delivery requests</p>
+      </article>
+      <article class="stat-card">
+        <span>Active Trips</span>
+        <strong>5</strong>
+        <p>Vehicles currently moving</p>
+      </article>
+      <article class="stat-card">
+        <span>Completed</span>
+        <strong>64</strong>
+        <p>Deliveries this month</p>
+      </article>
+      <article class="stat-card">
+        <span>On-Time Rate</span>
+        <strong>94%</strong>
+        <p>Recent delivery performance</p>
+      </article>
+    </section>
+
+    <section class="admin-section" id="jobs">
+      <div class="admin-section-heading">
+        <h2>Delivery Jobs</h2>
+        <p>Accept jobs that match your route, vehicle capacity, and timing.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Job ID</th>
+              <th>Pickup</th>
+              <th>Drop-off</th>
+              <th>Load</th>
+              <th>Status</th>
+              <th>Fee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#TR-512</td>
+              <td>Green Valley Farm</td>
+              <td>FreshMart</td>
+              <td>12 tomato crates</td>
+              <td><span class="tag tag-pending">Available</span></td>
+              <td>R 680</td>
+            </tr>
+            <tr>
+              <td>#TR-511</td>
+              <td>Sunrise Produce</td>
+              <td>City Foods</td>
+              <td>10 carrot bags</td>
+              <td><span class="tag tag-current">In transit</span></td>
+              <td>R 540</td>
+            </tr>
+            <tr>
+              <td>#TR-509</td>
+              <td>Hilltop Growers</td>
+              <td>Market Basket</td>
+              <td>24 spinach bundles</td>
+              <td><span class="tag tag-finished">Delivered</span></td>
+              <td>R 420</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="admin-section" id="routes">
+      <div class="admin-section-heading">
+        <h2>Route Updates</h2>
+        <p>Keep buyers and sellers informed as deliveries move.</p>
+      </div>
+      <div class="timeline-list">
+        <div class="timeline-item">
+          <span></span>
+          <div>
+            <h3>#TR-511 loaded</h3>
+            <p>Vehicle collected produce from Sunrise Produce at 09:10.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span></span>
+          <div>
+            <h3>Next stop: City Foods</h3>
+            <p>Estimated arrival is 12:30 with light traffic on the route.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span></span>
+          <div>
+            <h3>Proof of delivery needed</h3>
+            <p>Capture buyer confirmation once the order is delivered.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="admin-section" id="fleet">
+      <div class="admin-section-heading">
+        <h2>Fleet Status</h2>
+        <p>Vehicle availability, current assignments, and loading capacity.</p>
+      </div>
+      <div class="directory-grid">
+        <article class="directory-card">
+          <h3>Truck 01</h3>
+          <p>2.5 ton capacity</p>
+          <span>In transit</span>
+        </article>
+        <article class="directory-card">
+          <h3>Van 04</h3>
+          <p>1 ton capacity</p>
+          <span>Available</span>
+        </article>
+        <article class="directory-card">
+          <h3>Truck 07</h3>
+          <p>4 ton capacity</p>
+          <span>Maintenance</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="admin-section" id="earnings">
+      <div class="admin-section-heading">
+        <h2>Transport Earnings</h2>
+        <p>Delivery fees, pending payouts, and completed trip revenue.</p>
+      </div>
+      <div class="status-grid compact-status-grid">
+        <div class="status-card finished">
+          <span>Paid Trips</span>
+          <strong>58</strong>
+        </div>
+        <div class="status-card pending">
+          <span>Pending Payout</span>
+          <strong>6</strong>
+        </div>
+        <div class="status-card current">
+          <span>This Month</span>
+          <strong>R 22k</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

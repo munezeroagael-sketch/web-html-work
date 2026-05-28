@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Agri Link</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar">
+    <a class="brand admin-brand" href="index.html">
+      <span class="brand-mark">AL</span>
+      <span>Agri Link</span>
+    </a>
+
+    <nav class="admin-nav" aria-label="Admin navigation">
+      <a href="#overview" class="active">Overview</a>
+      <a href="#orders">Orders</a>
+      <a href="#refunds">Refunds</a>
+      <a href="#buyers">Buyers</a>
+      <a href="#sellers">Sellers</a>
+      <a href="#transport">Transport Providers</a>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <header class="admin-topbar">
+      <div>
+        <h1>Admin Dashboard</h1>
+        <p>Monitor marketplace orders, users, refunds, and delivery activity.</p>
+      </div>
+      <a href="login.html" class="button button-secondary">Logout</a>
+    </header>
+
+    <section class="stats-grid" id="overview">
+      <article class="stat-card">
+        <span>Current Orders</span>
+        <strong>12</strong>
+        <p>Orders being processed today</p>
+      </article>
+      <article class="stat-card">
+        <span>Pending</span>
+        <strong>8</strong>
+        <p>Waiting for seller confirmation</p>
+      </article>
+      <article class="stat-card">
+        <span>Finished</span>
+        <strong>145</strong>
+        <p>Completed this month</p>
+      </article>
+      <article class="stat-card">
+        <span>Refunds</span>
+        <strong>3</strong>
+        <p>Open refund requests</p>
+      </article>
+    </section>
+
+    <section class="admin-section" id="orders">
+      <div class="admin-section-heading">
+        <h2>Order Management</h2>
+        <p>Current, pending, finished, cancelled, disputed, and refunded orders.</p>
+      </div>
+
+      <div class="status-grid">
+        <div class="status-card current">
+          <span>Current</span>
+          <strong>12</strong>
+        </div>
+        <div class="status-card pending">
+          <span>Pending</span>
+          <strong>8</strong>
+        </div>
+        <div class="status-card finished">
+          <span>Finished</span>
+          <strong>145</strong>
+        </div>
+        <div class="status-card cancelled">
+          <span>Cancelled</span>
+          <strong>6</strong>
+        </div>
+        <div class="status-card dispute">
+          <span>Disputes</span>
+          <strong>2</strong>
+        </div>
+        <div class="status-card refund">
+          <span>Refunds</span>
+          <strong>3</strong>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Buyer</th>
+              <th>Seller</th>
+              <th>Transport</th>
+              <th>Status</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#AG-1048</td>
+              <td>FreshMart</td>
+              <td>Green Valley Farm</td>
+              <td>Fast Haul</td>
+              <td><span class="tag tag-current">Current</span></td>
+              <td>R 4,250</td>
+            </tr>
+            <tr>
+              <td>#AG-1047</td>
+              <td>City Foods</td>
+              <td>Sunrise Produce</td>
+              <td>RouteLink</td>
+              <td><span class="tag tag-pending">Pending</span></td>
+              <td>R 2,840</td>
+            </tr>
+            <tr>
+              <td>#AG-1046</td>
+              <td>Market Basket</td>
+              <td>Hilltop Growers</td>
+              <td>FarmMove</td>
+              <td><span class="tag tag-finished">Finished</span></td>
+              <td>R 7,120</td>
+            </tr>
+            <tr>
+              <td>#AG-1045</td>
+              <td>Local Kitchen</td>
+              <td>Agro Roots</td>
+              <td>Fast Haul</td>
+              <td><span class="tag tag-refund">Refund</span></td>
+              <td>R 1,360</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="admin-section" id="refunds">
+      <div class="admin-section-heading">
+        <h2>Refund Requests</h2>
+        <p>Review claims for damaged produce, late deliveries, or cancelled orders.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Refund ID</th>
+              <th>Order</th>
+              <th>Reason</th>
+              <th>Amount</th>
+              <th>Decision</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#RF-221</td>
+              <td>#AG-1045</td>
+              <td>Damaged tomatoes</td>
+              <td>R 1,360</td>
+              <td><span class="tag tag-pending">Needs review</span></td>
+            </tr>
+            <tr>
+              <td>#RF-220</td>
+              <td>#AG-1039</td>
+              <td>Delivery delay</td>
+              <td>R 720</td>
+              <td><span class="tag tag-current">Investigating</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="admin-section" id="buyers">
+      <div class="admin-section-heading">
+        <h2>All Buyers</h2>
+        <p>Registered buyers and purchasing activity.</p>
+      </div>
+      <div class="directory-grid">
+        <article class="directory-card">
+          <h3>FreshMart</h3>
+          <p>freshmart@example.com</p>
+          <span>34 orders</span>
+        </article>
+        <article class="directory-card">
+          <h3>City Foods</h3>
+          <p>orders@cityfoods.example</p>
+          <span>18 orders</span>
+        </article>
+        <article class="directory-card">
+          <h3>Market Basket</h3>
+          <p>buyer@marketbasket.example</p>
+          <span>27 orders</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="admin-section" id="sellers">
+      <div class="admin-section-heading">
+        <h2>All Sellers</h2>
+        <p>Farmers and produce suppliers currently selling on Agri Link.</p>
+      </div>
+      <div class="directory-grid">
+        <article class="directory-card">
+          <h3>Green Valley Farm</h3>
+          <p>Vegetables, herbs, and fruit</p>
+          <span>Verified seller</span>
+        </article>
+        <article class="directory-card">
+          <h3>Sunrise Produce</h3>
+          <p>Potatoes, onions, and carrots</p>
+          <span>Pending stock audit</span>
+        </article>
+        <article class="directory-card">
+          <h3>Hilltop Growers</h3>
+          <p>Seasonal fruit and fresh greens</p>
+          <span>Verified seller</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="admin-section" id="transport">
+      <div class="admin-section-heading">
+        <h2>Transport Providers</h2>
+        <p>Delivery partners, active routes, and service status.</p>
+      </div>
+      <div class="directory-grid">
+        <article class="directory-card">
+          <h3>Fast Haul</h3>
+          <p>5 vehicles available</p>
+          <span>Active</span>
+        </article>
+        <article class="directory-card">
+          <h3>RouteLink</h3>
+          <p>2 vehicles available</p>
+          <span>Active</span>
+        </article>
+        <article class="directory-card">
+          <h3>FarmMove</h3>
+          <p>1 vehicle available</p>
+          <span>Busy</span>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
