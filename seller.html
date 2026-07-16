@@ -1,213 +1,274 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seller Dashboard | Agri Link</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Agri Link Seller Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="admin-body">
-  <aside class="admin-sidebar">
-    <a class="brand admin-brand" href="index.html">
-      <span class="brand-mark">AL</span>
-      <span>Agri Link</span>
-    </a>
 
-    <nav class="admin-nav" aria-label="Seller navigation">
-      <a href="#overview" class="active">Overview</a>
-      <a href="#inventory">Inventory</a>
-      <a href="#orders">Orders</a>
-      <a href="#buyers">Buyers</a>
-      <a href="#earnings">Earnings</a>
-    </nav>
-  </aside>
+    <aside class="sidebar">
 
-  <main class="admin-main">
-    <header class="admin-topbar">
-      <div>
-        <h1>Seller Dashboard</h1>
-        <p>Manage stock, approve orders, and prepare produce for delivery.</p>
-      </div>
-      <a href="login.html" class="button button-secondary">Logout</a>
-    </header>
+        <a href="index.html" class="brand">
+            <span class="brand-mark">AL</span>
+            <span>Agri Link</span>
+        </a>
 
-    <section class="stats-grid" id="overview">
-      <article class="stat-card">
-        <span>New Orders</span>
-        <strong>7</strong>
-        <p>Waiting for your confirmation</p>
-      </article>
-      <article class="stat-card">
-        <span>Products Listed</span>
-        <strong>18</strong>
-        <p>Active produce listings</p>
-      </article>
-      <article class="stat-card">
-        <span>Low Stock</span>
-        <strong>5</strong>
-        <p>Listings that need updating</p>
-      </article>
-      <article class="stat-card">
-        <span>Revenue</span>
-        <strong>R 46k</strong>
-        <p>Confirmed this month</p>
-      </article>
-    </section>
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#inventory">Inventory</a>
+            <a href="#orders">Orders</a>
+            <a href="#buyers">Buyers</a>
+            <a href="#earnings">Earnings</a>
+        </nav>
 
-    <section class="admin-section" id="inventory">
-      <div class="admin-section-heading">
-        <h2>Inventory</h2>
-        <p>Keep produce listings accurate so buyers see real stock levels.</p>
-      </div>
+    </aside>
 
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Produce</th>
-              <th>Available Stock</th>
-              <th>Price</th>
-              <th>Quality Grade</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Tomatoes</td>
-              <td>84 crates</td>
-              <td>R 180</td>
-              <td>A</td>
-              <td><span class="tag tag-finished">Available</span></td>
-            </tr>
-            <tr>
-              <td>Carrots</td>
-              <td>22 bags</td>
-              <td>R 110</td>
-              <td>A</td>
-              <td><span class="tag tag-pending">Low stock</span></td>
-            </tr>
-            <tr>
-              <td>Spinach</td>
-              <td>140 bundles</td>
-              <td>R 35</td>
-              <td>B</td>
-              <td><span class="tag tag-finished">Available</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+    <main class="dashboard">
 
-    <section class="admin-section" id="orders">
-      <div class="admin-section-heading">
-        <h2>Incoming Orders</h2>
-        <p>Approve orders, reserve stock, and hand over to transport providers.</p>
-      </div>
+        <header class="topbar">
 
-      <div class="status-grid compact-status-grid">
-        <div class="status-card pending">
-          <span>Pending Approval</span>
-          <strong>7</strong>
-        </div>
-        <div class="status-card current">
-          <span>Preparing</span>
-          <strong>4</strong>
-        </div>
-        <div class="status-card finished">
-          <span>Collected</span>
-          <strong>19</strong>
-        </div>
-      </div>
+            <div>
+                <h1>Seller Dashboard</h1>
+                <p>Manage stock, orders, buyers, and earnings.</p>
+            </div>
 
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Order ID</th>
-              <th>Buyer</th>
-              <th>Produce</th>
-              <th>Quantity</th>
-              <th>Status</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>#AG-3091</td>
-              <td>FreshMart</td>
-              <td>Tomatoes</td>
-              <td>12 crates</td>
-              <td><span class="tag tag-pending">Approve</span></td>
-              <td>R 2,160</td>
-            </tr>
-            <tr>
-              <td>#AG-3090</td>
-              <td>City Foods</td>
-              <td>Carrots</td>
-              <td>10 bags</td>
-              <td><span class="tag tag-current">Preparing</span></td>
-              <td>R 1,100</td>
-            </tr>
-            <tr>
-              <td>#AG-3087</td>
-              <td>Market Basket</td>
-              <td>Spinach</td>
-              <td>24 bundles</td>
-              <td><span class="tag tag-finished">Collected</span></td>
-              <td>R 840</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+            <a href="login.html" class="logout-button">Logout</a>
 
-    <section class="admin-section" id="buyers">
-      <div class="admin-section-heading">
-        <h2>Top Buyers</h2>
-        <p>Buyers who frequently order from your farm.</p>
-      </div>
-      <div class="directory-grid">
-        <article class="directory-card">
-          <h3>FreshMart</h3>
-          <p>34 completed orders</p>
-          <span>Reliable buyer</span>
-        </article>
-        <article class="directory-card">
-          <h3>City Foods</h3>
-          <p>18 completed orders</p>
-          <span>Weekly buyer</span>
-        </article>
-        <article class="directory-card">
-          <h3>Market Basket</h3>
-          <p>27 completed orders</p>
-          <span>Bulk buyer</span>
-        </article>
-      </div>
-    </section>
+        </header>
 
-    <section class="admin-section" id="earnings">
-      <div class="admin-section-heading">
-        <h2>Earnings</h2>
-        <p>Track confirmed payments and expected payouts.</p>
-      </div>
-      <div class="directory-grid">
-        <article class="directory-card">
-          <h3>Available Balance</h3>
-          <p>Ready for payout</p>
-          <span>R 12,480</span>
-        </article>
-        <article class="directory-card">
-          <h3>Pending Payout</h3>
-          <p>Orders still being delivered</p>
-          <span>R 6,940</span>
-        </article>
-        <article class="directory-card">
-          <h3>Refund Hold</h3>
-          <p>Orders under review</p>
-          <span>R 620</span>
-        </article>
-      </div>
-    </section>
-  </main>
+        <section id="overview" class="stats">
+
+            <div class="stat-card">
+                <h3>New Orders</h3>
+                <strong>7</strong>
+                <p>Waiting for confirmation</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Products Listed</h3>
+                <strong>18</strong>
+                <p>Active produce listings</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Low Stock</h3>
+                <strong>5</strong>
+                <p>Products that need restocking</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Revenue</h3>
+                <strong>RWF 46,000</strong>
+                <p>Confirmed this month</p>
+            </div>
+
+        </section>
+
+        <section id="inventory" class="dashboard-section">
+
+            <h2>Inventory</h2>
+            <p>View and manage your available produce.</p>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Produce</th>
+                            <th>Available Stock</th>
+                            <th>Price</th>
+                            <th>Quality Grade</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Tomatoes</td>
+                            <td>84 crates</td>
+                            <td>RWF 180</td>
+                            <td>A</td>
+                            <td>
+                                <span class="tag finished">Available</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Carrots</td>
+                            <td>22 bags</td>
+                            <td>RWF 110</td>
+                            <td>A</td>
+                            <td>
+                                <span class="tag pending">Low Stock</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Spinach</td>
+                            <td>140 bundles</td>
+                            <td>RWF 35</td>
+                            <td>B</td>
+                            <td>
+                                <span class="tag finished">Available</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <section id="orders" class="dashboard-section">
+
+            <h2>Incoming Orders</h2>
+            <p>Confirm orders and prepare produce for delivery.</p>
+
+            <div class="order-status">
+
+                <div class="status-card">
+                    <span>Pending Approval</span>
+                    <strong>7</strong>
+                </div>
+
+                <div class="status-card">
+                    <span>Preparing</span>
+                    <strong>4</strong>
+                </div>
+
+                <div class="status-card">
+                    <span>Collected</span>
+                    <strong>19</strong>
+                </div>
+
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Buyer</th>
+                            <th>Produce</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>#AG-3091</td>
+                            <td>FreshMart</td>
+                            <td>Tomatoes</td>
+                            <td>12 crates</td>
+                            <td>
+                                <span class="tag pending">Approve</span>
+                            </td>
+                            <td>RWF 2,160</td>
+                        </tr>
+
+                        <tr>
+                            <td>#AG-3090</td>
+                            <td>City Foods</td>
+                            <td>Carrots</td>
+                            <td>10 bags</td>
+                            <td>
+                                <span class="tag current">Preparing</span>
+                            </td>
+                            <td>RWF 1,100</td>
+                        </tr>
+
+                        <tr>
+                            <td>#AG-3087</td>
+                            <td>Market Basket</td>
+                            <td>Spinach</td>
+                            <td>24 bundles</td>
+                            <td>
+                                <span class="tag finished">Collected</span>
+                            </td>
+                            <td>RWF 840</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <section id="buyers" class="dashboard-section">
+
+            <h2>Top Buyers</h2>
+            <p>Buyers who frequently order from your farm.</p>
+
+            <div class="cards">
+
+                <div class="user-card">
+                    <h3>FreshMart</h3>
+                    <p>34 completed orders</p>
+                    <span>Reliable buyer</span>
+                </div>
+
+                <div class="user-card">
+                    <h3>City Foods</h3>
+                    <p>18 completed orders</p>
+                    <span>Weekly buyer</span>
+                </div>
+
+                <div class="user-card">
+                    <h3>Market Basket</h3>
+                    <p>27 completed orders</p>
+                    <span>Bulk buyer</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="earnings" class="dashboard-section">
+
+            <h2>Earnings</h2>
+            <p>View confirmed payments and expected payouts.</p>
+
+            <div class="cards">
+
+                <div class="user-card">
+                    <h3>Available Balance</h3>
+                    <p>Ready for payout</p>
+                    <span>RWF 12,480</span>
+                </div>
+
+                <div class="user-card">
+                    <h3>Pending Payout</h3>
+                    <p>Orders still being delivered</p>
+                    <span>RWF 6,940</span>
+                </div>
+
+                <div class="user-card">
+                    <h3>Refund Hold</h3>
+                    <p>Orders under review</p>
+                    <span>RWF 620</span>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+<script src="script.js"></script>
 </body>
+
 </html>
+
